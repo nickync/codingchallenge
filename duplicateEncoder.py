@@ -12,10 +12,10 @@ Examples
 """
 
 def duplicate_encode(word):
-    strWord= [i.lower() for i in word]      #seperate the input into list
+    #strWord= [i.lower() for i in word]      #seperate the input into list (Not needed)
     ans = ''
-    for i in strWord:      
-        if strWord.count(i) > 1:        # find the character counts
+    for i in word:      
+        if word.count(i) > 1:        # find the character counts
             ans += ')'
         else:
             ans += '('
@@ -26,3 +26,5 @@ def duplicate_encode(word):
 # Best Solution
 def duplicate_encode(word):
     return "".join(["(" if word.lower().count(c) == 1 else ")" for c in word.lower()])
+
+
