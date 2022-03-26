@@ -23,5 +23,5 @@ def solution(s):
 
 
  # Best Solution
- def solution(s):
+def solution(s):
     return ''.join(' ' + c if c.isupper() else c for c in s)
