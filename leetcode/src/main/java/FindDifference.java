@@ -9,7 +9,7 @@ public class FindDifference {
     }
 
     public static List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
-        // 9ms 
+        // 9ms
         HashMap<Integer, Integer> ls1 = new HashMap<>();
         HashMap<Integer, Integer> ls2 = new HashMap<>();
             for (int n:nums1){
