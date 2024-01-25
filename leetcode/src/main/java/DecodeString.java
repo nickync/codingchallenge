@@ -1,16 +1,15 @@
 public class DecodeString {
     public static void main(String[] args) {
-//        System.out.println(decodeString("3[a2[c]]"));
-//        System.out.println(decodeString("2[abc]3[cd]ef"));
+        System.out.println(decodeString("3[a2[c]]"));
+        System.out.println(decodeString("2[abc]3[cd]ef"));
         System.out.println(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));
-//        System.out.println(decodeString("100[leetcode]"));
-//        System.out.println(decodeString("leetcode"));
+        System.out.println(decodeString("100[leetcode]"));
+        System.out.println(decodeString("leetcode"));
     }
 
     public static String decodeString(String s) {
         char[] chars = s.toCharArray();
         StringBuilder res = new StringBuilder();
-        int mul = 1;
         int start = 0;
         int end = s.length();
         StringBuilder num = new StringBuilder();
