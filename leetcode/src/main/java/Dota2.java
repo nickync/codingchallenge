@@ -1,6 +1,4 @@
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class Dota2 {
@@ -12,34 +10,29 @@ public class Dota2 {
     }
 
     public static String predictPartyVictory(String senate) {
-
-        int count = 0;
         char[] cs = senate.toCharArray();
-        boolean kk = true;
-        Queue<Character> request = new LinkedList<>();
-        List.of(senate.toCharArray()).stream().forEach(i -> request.offer(i));
-        request.offer(cs[0]);
-        while (request.contains('R') & request.contains('D')){
-            for (char c : cs){
-                if (request.size() == 0){
-                    request.offer(c);
-                    continue;
-                }
-                if (request.peek() == c){
-                    request.offer(c);
+        Queue<Integer> r = new LinkedList<>();
+        Queue<Integer> d = new LinkedList<>();
 
-                } else if (count > 0){
-                    count --;
-                    request.offer(c);
+        for (int i=0; i< cs.length; i ++){
+            if (cs[i] == 'R'){
+                r.offer(i);
+            } else {
+                d.offer(i);
+            }
+        }
 
-                    continue;
-                }  else {
-                    count ++;
-                }
+        while (!r.isEmpty() & !d.isEmpty()){
+            int ra = r.poll();
+            int di = d.poll();
+            if (ra < di){
+                r.offer(ra + cs.length);
+            } else {
+                d.offer(di + cs.length);
             }
         }
 
 
-        return request.peek() == 'R' ? "Radiant" : "Dire";
+        return r.isEmpty() ? "Dire" : "Radiant";
     }
 }
