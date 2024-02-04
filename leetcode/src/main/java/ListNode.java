@@ -35,6 +35,50 @@ class Solution {
 
     }
 
+    public static ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while (curr != null){
+            ListNode tem = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = tem;
+        }
+        return prev;
+
+//        bad way ->
+//        int n = 1;
+//        ListNode co = head;
+//        while (co != null && co.next != null){
+//            n ++;
+//            co = co.next;
+//        }
+//        ListNode newH = null;
+//        ListNode newl = null;
+//        ListNode val = null;
+//        ListNode tem = null;
+//        while (n > 0){
+//            co = head;
+//            for (int i =0; i < n; i ++){
+//                val = co;
+//                co = co.next;
+//            }
+//            n --;
+//
+//            if (newl == null){
+//                val.next = tem;
+//                newl = val;
+//                newH = newl;
+//            } else {
+//                val.next = null;
+//                newl.next = val;
+//                newl= newl.next;
+//            }
+//        }
+//        return newH;
+    }
+
     public static void main(String[] args) {
         ListNode one = new ListNode();
         ListNode two = new ListNode();
@@ -49,6 +93,10 @@ class Solution {
         four.val = 4;
         four.next = null;
 
-        System.out.println(oddEvenList(one));
+        ListNode te = reverseList(one);
+        while ( te.next != null){
+            System.out.println(te.val);
+            te = te.next;
+        }
     }
 }
