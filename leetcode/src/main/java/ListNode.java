@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class ListNode {
     int val;
     ListNode next;
@@ -79,6 +82,36 @@ class Solution {
 //        return newH;
     }
 
+    public static int pairSum(ListNode head) {
+        if (head == null) return 0;
+
+        ListNode f = head.next.next;
+        ListNode s = head;
+        while (f != null && f.next != null){
+            f = f.next.next;
+            s = s.next;
+        }
+        ListNode prev = null;
+        while(s!=null){
+            ListNode tem = s.next;
+            s.next=prev;
+            prev = s;
+            s = tem;
+        }
+
+        int max = 0;
+        while (prev != null & head != null){
+            if (head.val + prev.val > max){
+                max = head.val + prev.val;
+            }
+            head = head.next;
+            prev = prev.next;
+        }
+        return max;
+
+    }
+
+
     public static void main(String[] args) {
         ListNode one = new ListNode();
         ListNode two = new ListNode();
@@ -98,5 +131,9 @@ class Solution {
             System.out.println(te.val);
             te = te.next;
         }
+
+        List<Integer> a1 = new LinkedList<>();
+        List<Integer> a2 = new LinkedList<>();
+        a1.contains(a2);
     }
 }
