@@ -1,3 +1,5 @@
+package datastructure;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,15 +54,15 @@ class Solution {
 
 //        bad way ->
 //        int n = 1;
-//        ListNode co = head;
+//        datastructure.ListNode co = head;
 //        while (co != null && co.next != null){
 //            n ++;
 //            co = co.next;
 //        }
-//        ListNode newH = null;
-//        ListNode newl = null;
-//        ListNode val = null;
-//        ListNode tem = null;
+//        datastructure.ListNode newH = null;
+//        datastructure.ListNode newl = null;
+//        datastructure.ListNode val = null;
+//        datastructure.ListNode tem = null;
 //        while (n > 0){
 //            co = head;
 //            for (int i =0; i < n; i ++){

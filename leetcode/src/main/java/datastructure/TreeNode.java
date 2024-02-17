@@ -1,3 +1,5 @@
+package datastructure;
+
 import java.util.HashMap;
 
 public class TreeNode {
