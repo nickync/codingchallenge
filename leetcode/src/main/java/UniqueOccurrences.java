@@ -5,7 +5,12 @@ import java.util.Set;
 
 public class UniqueOccurrences {
     public static void main(String[] args) {
-        System.out.println(uniqueOccurrences(new int[]{1,2,2,1,1,3}));
+        //System.out.println(uniqueOccurrences(new int[]{1,2,2,1,1,3}));
+        String str = "asdf";
+        str.contains("dfsa");
+        HashMap<Integer, String[]> map = new HashMap<>();
+        System.out.println(map.keySet().size()==0);
+
     }
 
     public static boolean uniqueOccurrences(int[] arr) {
