@@ -1,8 +1,6 @@
 package datastructure;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class HashMapQ {
     public static List<List<String>> groupAnagrams(String[] strings){
@@ -34,8 +32,12 @@ public class HashMapQ {
             }
         }
         List<Integer> res = new ArrayList<>();
-        String r = "rser";
-        r.length()
+        var set = new HashSet<>();
+
+        var list = new ArrayList<String>();
+        for (String s : list){
+            s
+        }
     }
 
 
