@@ -35,9 +35,8 @@ public class HashMapQ {
         var set = new HashSet<>();
 
         var list = new ArrayList<String>();
-        for (String s : list){
-            s
-        }
+        res.set(1, 1);
+        res.remove()
     }
 
 
