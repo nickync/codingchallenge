@@ -36,7 +36,7 @@ public class HashMapQ {
 
         var list = new ArrayList<String>();
         res.set(1, 1);
-        res.remove()
+        return map.values().stream().toList();
     }
 
 
